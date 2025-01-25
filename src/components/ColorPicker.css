@@ -1,44 +1,87 @@
 .color-picker-container {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 h1 {
-  margin: 50px 0;
-  font-size: 3rem;
+  margin: 1.5rem 0;
+  font-size: 2.5rem;
 }
 
 .color-display {
-  width: 200px;
-  height: 200px;
+  width: 70%;
+  aspect-ratio: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 5px solid hsl(0, 0%, 66%);
   border-radius: 25px;
-  margin-bottom: 30px;
+  margin-bottom: 1.5rem;
   transition: background-color 0.25s ease;
 }
 
 .color-display p {
   color: hsl(0, 0%, 20%);
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-align: center;
 }
 
 label {
   font-size: 1.5rem;
   font-weight: bold;
-  margin-bottom: 25px;
+  margin-bottom: 1rem;
 }
 
 input[type="color"] {
-  width: 75px;
-  height: 50px;
-  padding: 5px;
+  width: 60px;
+  height: 40px;
   border: 3px solid hsl(0, 0%, 80%);
   border-radius: 10px;
-  direction: ltr;
-  position: bottom;
+  padding: 0.2rem;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .color-display {
+    max-width: 300px;
+  }
+
+  label {
+    font-size: 1rem;
+  }
+
+  input[type="color"] {
+    width: 50px;
+    height: 35px;
+  }
+}
+@media (min-width: 2560px) {
+  h1 {
+    font-size: 5rem;
+  }
+
+  .color-display {
+    width: 60%; 
+    max-width: 900px;
+    border-radius: 40px;
+  }
+
+  .color-display p {
+    font-size: 2rem; 
+  }
+
+  label {
+    font-size: 2.5rem;
+  }
+
+  input[type="color"] {
+    width: 120px;
+    height: 70px;
+    border-width: 5px;
+  }
 }
